@@ -25,9 +25,4 @@ Counts, names and settings are saved to the SD card automatically, so you can co
 
 ## Building
 
-Built with [ufbt](https://github.com/flipperdevices/flipperzero-ufbt):
-
-```
-python -m ufbt        # build
-python -m ufbt launch # build, install and run on a connected Flipper
-```
+Built with [ufbt](https://github.com/flipperdevices/flipperzero-ufbt): run **python -m ufbt** in the repo root to build, or **python -m ufbt launch** to build, install and run on a connected Flipper.
