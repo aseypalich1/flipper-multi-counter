@@ -1,0 +1,13 @@
+App(
+    appid="multi_counter",
+    name="Multi Counter",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="multi_counter_app",
+    sources=["multi_counter.c"],
+    stack_size=2 * 1024,
+    fap_category="Tools",
+    fap_icon="icon_10px.png",
+    fap_author="ziper",
+    fap_version="1.0",
+    fap_description="Six independent counters, one per hardware button",
+)
