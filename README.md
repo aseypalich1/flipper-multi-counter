@@ -1,4 +1,4 @@
-# Multi Counter
+# Multi Tally
 
 Six independent tally counters on one screen — one for each hardware button of your Flipper Zero.
 

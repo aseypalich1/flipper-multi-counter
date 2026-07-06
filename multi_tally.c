@@ -12,7 +12,7 @@
 #include <storage/storage.h>
 #include <flipper_format/flipper_format.h>
 
-#define TAG "MultiCounter"
+#define TAG "MultiTally"
 
 #define GROUP_COUNT 6
 #define NAME_LEN 12
@@ -20,7 +20,7 @@
 #define FLASH_MS 150
 #define AUTOSAVE_MS 10000
 
-#define SAVE_PATH APP_DATA_PATH("multi_counter.save")
+#define SAVE_PATH APP_DATA_PATH("multi_tally.save")
 
 typedef enum {
     ViewIdMain,
@@ -121,7 +121,7 @@ static const NotificationSequence seq_beep_minus = {
 };
 
 static const char* const help_text =
-    "\e#Multi Counter\n"
+    "\e#Multi Tally\n"
     "Each button counts its\n"
     "own group: Up, Down,\n"
     "Left, Right, OK, Back.\n"
@@ -753,7 +753,7 @@ static App* app_alloc(void) {
     view_dispatcher_add_view(app->view_dispatcher, ViewIdMain, app->main_view);
 
     app->menu = submenu_alloc();
-    submenu_set_header(app->menu, "Multi Counter");
+    submenu_set_header(app->menu, "Multi Tally");
     submenu_add_item(app->menu, "How to use", MenuIndexHelp, menu_callback, app);
     submenu_add_item(app->menu, "Groups", MenuIndexGroups, menu_callback, app);
     submenu_add_item(app->menu, "Settings", MenuIndexSettings, menu_callback, app);
@@ -834,7 +834,7 @@ static void app_free(App* app) {
     free(app);
 }
 
-int32_t multi_counter_app(void* p) {
+int32_t multi_tally_app(void* p) {
     UNUSED(p);
     App* app = app_alloc();
     state_load(app);
